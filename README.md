@@ -78,6 +78,14 @@ catkin_ws$ roslaunch miflora_server read_sensor.launch
 </pre>
 
 
+Troubleshooting:
+
+If you raspberry pi stops being able to connect to the sensor run:
+<pre>
+$ sudo hciconfig hci0 down && sudo hciconfig hci0 up
+</pre>
+
+
 
 
 
