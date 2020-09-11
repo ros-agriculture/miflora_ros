@@ -34,9 +34,10 @@ Where **PATH** is the place where bluepy-helper is installed.
 
 Install the ROS package
 <pre>
+catkin_ws/src$ sudo apt-get install python-catkin-tools
 catkin_ws/src$ git clone https://github.com/ros-agriculture/miflora_ros.git
 catkin_ws/src$ cd ..
-catkin_ws/src$ rosdep install --from-paths src --ignore-src --rosdistro=ROSDISTRO
+catkin_ws/src$ rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
 catkin_ws$ catkin build
 catkin_ws$ source devel/setup.bash
 </pre>
