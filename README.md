@@ -44,7 +44,7 @@ catkin_ws$ source devel/setup.bash
 
 Discover the MAC address of your sensor.
 <pre>
-catkin_ws$ rosrun miflora_service discover_devices.py
+catkin_ws$ rosrun miflora_server discover_devices.py
 
 This will print out the MAC address if found.
 00:00:00:00:00:00
