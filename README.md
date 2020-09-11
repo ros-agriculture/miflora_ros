@@ -25,10 +25,10 @@ $ find /usr/local/lib -name bluepy-helper
 or
 $ find /home -name bluepy-helper
 
-$ sudo setcap cap_net_raw+e  <PATH>/bluepy-helper
-$ sudo setcap cap_net_admin+eip  <PATH>/bluepy-helper
+$ sudo setcap cap_net_raw+e  **PATH**/bluepy-helper
+$ sudo setcap cap_net_admin+eip  **PATH**/bluepy-helper
 
-Where <PATH> is the place where bluepy-helper is installed.
+Where **PATH** is the place where bluepy-helper is installed.
 
 </pre>
 

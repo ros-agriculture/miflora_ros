@@ -6,7 +6,7 @@
     <!-- Device Argument -->
     <arg name="Frame_ID" default="greenhouse"/>
     <arg name="MAC_addr" default="00:00:00:00:00:00"/>
-    <!-- Sample Rate miniumum is once per minute 0.01667 hz -->
+    <!-- Sample Rate minimum is once per minute 0.01667 hz -->
     <arg name="sample_rate" default="0.01667"/>
 
     <!-- Client Node -->
