@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>miflora_ros</name>
+  <version>0.0.0</version>
+  <description>The miflora_ros package the MiFlora or VegTrug sensor.</description>
+  <maintainer email="matt@rosagriculture.org">Matt Droter</maintainer>
+  <license>MIT</license>
+  <!-- Url tags are optional, but multiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/miflora_ros</url> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>miflora_msgs</exec_depend>
+  <exec_depend>miflora_server</exec_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

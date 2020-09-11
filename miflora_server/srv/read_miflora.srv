@@ -1,0 +1,4 @@
+string FrameID
+string MAC
+---
+miflora_msgs/miflora sensor
