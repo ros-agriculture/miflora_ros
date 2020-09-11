@@ -1,4 +1,5 @@
-#!/usr/bin/env python3.6 
+#!/usr/bin/env python3.7
+
 from btlewrap import BluepyBackend
 from miflora import miflora_scanner 
 

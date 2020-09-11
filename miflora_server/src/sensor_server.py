@@ -17,7 +17,7 @@ def callback_msg(msg):
   # Run sensor driver.  Requires python >=3.6
   # HACK: Done this way to remove conflicts with ROS python version.
   path = rospkg.RosPack().get_path('miflora_server')
-  miflora_out = subprocess.check_output(["python3.6", path+"/src/miflora_driver.py", msg.MAC])
+  miflora_out = subprocess.check_output(["python3.7", path+"/src/miflora_driver.py", msg.MAC])
     
   try:
     miflora_data = json.loads(miflora_out.replace("'", '"'))

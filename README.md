@@ -51,7 +51,7 @@ This will print out the MAC address if found.
 
 Edit the launch file and update with MAC address and name.
 <pre>
-catkin_ws$ rosedit miflora_service client.launch
+catkin_ws$ rosedit miflora_server client.launch
 </pre>
 
 ```
@@ -60,6 +60,16 @@ catkin_ws$ rosedit miflora_service client.launch
     <!-- Sample Rate minimum is once per minute 0.01667 hz -->
     <arg name="sample_rate" default="0.01667"/>
 ```
+
+Start ROS Service
+<pre>
+catkin_ws$ roslaunch miflora_server service.launch
+</pre>
+
+Start the ROS Service Client to request readings
+<pre>
+catkin_ws$ roslaunch miflora_server client.launch
+</pre>
 
 
 

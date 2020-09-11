@@ -7,7 +7,7 @@ from miflora_server.srv import *
 def publish_sensor():
   # Load parameters set in launch file
   frame_id = rospy.get_param('~Frame_ID', "greenhouse") 
-  mac_addr = rospy.get_param('~MAC_addr', "80:EA:CA:88:D7:E2")
+  mac_addr = rospy.get_param('~MAC_addr', "00:00:00:00:00:00")
   sample_rate = rospy.get_param('~sample_rate', "0.01667")
 
   # Setup call to ROS Service
