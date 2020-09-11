@@ -72,6 +72,11 @@ Start the ROS Service Client to request readings
 catkin_ws$ roslaunch miflora_server client.launch
 </pre>
 
+Start both the service and client
+<pre>
+catkin_ws$ roslaunch miflora_server read_sensor.launch
+</pre>
+
 
 
 

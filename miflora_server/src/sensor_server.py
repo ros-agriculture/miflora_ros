@@ -45,9 +45,7 @@ def callback_msg(msg):
 
 def service_server():
   rospy.init_node("sensor_server")
-
   s = rospy.Service("sensor_read", read_miflora, callback_msg)
-
   rospy.spin()
 
 

@@ -22,7 +22,7 @@ def publish_sensor():
   while not rospy.is_shutdown():
     # Call service and get response 
     result = service_client(service_client_object)
-    rospy.loginfo(result)
+    #rospy.loginfo(result)
     rate.sleep()
 
   rospy.spin()       
