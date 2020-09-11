@@ -51,7 +51,7 @@ This will print out the MAC address if found.
 
 Edit the launch file and update with MAC address and name.
 <pre>
-catkin_ws$ rosedit miflora_service service.launch
+catkin_ws$ rosedit miflora_service client.launch
 </pre>
 
 ```
