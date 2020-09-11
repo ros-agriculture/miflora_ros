@@ -1,8 +1,8 @@
 MiFlora
 ====================
 
-ROS package for reading the MiFlora plant sensor.
-![Foto MiFlora](http:// )
+ROS package for reading the MiFlora plant sensor. <br />
+![Foto MiFlora](https://github.com/ros-agriculture/miflora_ros/blob/master/miflora.png?raw=true ) <br />
 Bluetooth monitor for light, moisture, electric conductivity, and temperature.
 
 Install instructions
@@ -56,8 +56,8 @@ catkin_ws$ rosedit miflora_service service.launch
 ```
     <arg name="Frame_ID" default="MEASUREMENT_FRAME"/>
     <arg name="MAC_addr" default="00:00:00:00:00:00"/>
-    <!-- Sample Rate miniumum is twice per minute 2 hz -->
-    <arg name="sample_rate" default="2"/>
+    <!-- Sample Rate minimum is once per minute 0.01667 hz -->
+    <arg name="sample_rate" default="0.01667"/>
 ```
 
 
