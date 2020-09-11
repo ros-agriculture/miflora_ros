@@ -28,7 +28,7 @@ def main(arg):
     measurements = {}
 
     try:
-        poller = MiFloraPoller(arg, BluepyBackend)
+        poller = MiFloraPoller(arg, BluepyBackend, cache_timeout=900)
         for key, code in readings.items():
             value = poller.parameter_value(code)
             if value is not None:

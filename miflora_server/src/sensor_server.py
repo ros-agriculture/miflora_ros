@@ -40,6 +40,7 @@ def callback_msg(msg):
   except:
     # Return blank measurements on error.
     rospy.logerr(miflora_out)
+    rospy.logwarn("Try resetting BL $sudo hciconfig hci0 down && sudo hciconfig hci0 up")
     return read_mifloraResponse()
 
 
