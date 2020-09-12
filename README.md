@@ -85,6 +85,17 @@ If you raspberry pi stops being able to connect to the sensor run:
 $ sudo hciconfig hci0 down && sudo hciconfig hci0 up
 </pre>
 
+The BLE device freezes a lot on a raspberrypi 3.
+Adding this crontab job will reset your BLE at a regular interval.
+<pre>
+$ sudo crontab -e
+
+This will open a edit window.  Then add this at the bottom:
+
+1 * * * * hciconfig hci0 reset
+
+</pre>
+
 
 
 

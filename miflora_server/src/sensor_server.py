@@ -40,7 +40,9 @@ def callback_msg(msg):
   except:
     # Return blank measurements on error.
     rospy.logerr(miflora_out)
-    rospy.logwarn("Try resetting BL: $ sudo hciconfig hci0 down && sudo hciconfig hci0 up")
+    rospy.logwarn("Try resetting BLE: $ sudo hciconfig hci0 down && sudo hciconfig hci0 up")
+    rospy.logwarn("Or add reset to crontab: $ sudo crontab -e ") 
+    rospy.logwarn("add to bottom: 1 * * * * hciconfig hci0 reset")
     return read_mifloraResponse()
 
 
