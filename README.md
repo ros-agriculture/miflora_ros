@@ -2,6 +2,11 @@ MiFlora
 ====================
 
 ROS package for reading the MiFlora plant sensor. <br />
+
+ROS package freezes bluetooth adapter and stops working frequently. <br />
+Any ideas?  Please open pull request or open issue. <br />
+
+
 ![Foto MiFlora](https://github.com/ros-agriculture/miflora_ros/blob/master/miflora.png?raw=true ) <br />
 Bluetooth monitor for light, moisture, electric conductivity, and temperature.
 
@@ -79,6 +84,7 @@ catkin_ws$ roslaunch miflora_server read_sensor.launch
 
 
 Troubleshooting:
+![Foto MiFlora Error](https://github.com/ros-agriculture/miflora_ros/blob/master/error.png?raw=true)
 
 If you raspberry pi stops being able to connect to the sensor run:
 <pre>
@@ -92,7 +98,7 @@ $ sudo crontab -e
 
 This will open a edit window.  Then add this at the bottom:
 
-1 * * * * hciconfig hci0 reset
+5 * * * * hciconfig hci0 reset
 
 </pre>
 

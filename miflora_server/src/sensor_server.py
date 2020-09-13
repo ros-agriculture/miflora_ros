@@ -14,6 +14,12 @@ sensor_msg = miflora()
 def callback_msg(msg):
   ''' Read sensor and return measurements '''
 
+  # Check to see is MAC has been set
+  if msg.MAC == '00:00:00:00:00:00':
+    rospy.logwarn("MAC address not set.  Run $ rosrun miflora_server discover_devices.py")
+    break
+    
+
   # Run sensor driver.  Requires python >=3.6
   # HACK: Done this way to remove conflicts with ROS python version.
   path = rospkg.RosPack().get_path('miflora_server')
