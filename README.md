@@ -3,6 +3,7 @@ MiFlora
 
 ROS package for reading the MiFlora plant sensor. <br />
 
+
 ROS package freezes bluetooth adapter and stops working frequently. <br />
 Any ideas?  Please open pull request or open issue. <br />
 
@@ -10,7 +11,7 @@ Any ideas?  Please open pull request or open issue. <br />
 ![Foto MiFlora](https://github.com/ros-agriculture/miflora_ros/blob/master/miflora.png?raw=true ) <br />
 Bluetooth monitor for light, moisture, electric conductivity, and temperature.
 
-Install instructions
+### Install instructions
 
 Requires python > 3.6
 <pre>
@@ -24,7 +25,7 @@ sudo python3.7 -m pip install miflora
 sudo python3.7 -m pip install bluepy
 </pre>
 
-Set permission so the app can use Bluetooth
+### Set permission so the app can use Bluetooth
 <pre>
 $ find /usr/local/lib -name bluepy-helper
 or
@@ -37,7 +38,7 @@ Where **PATH** is the place where bluepy-helper is installed.
 
 </pre>
 
-Install the ROS package
+### Install the ROS package
 <pre>
 catkin_ws/src$ sudo apt-get install python-catkin-tools
 catkin_ws/src$ git clone https://github.com/ros-agriculture/miflora_ros.git
@@ -47,7 +48,7 @@ catkin_ws$ catkin build
 catkin_ws$ source devel/setup.bash
 </pre>
 
-Discover the MAC address of your sensor.
+### Discover the MAC address of your sensor.
 <pre>
 catkin_ws$ rosrun miflora_server discover_devices.py
 
@@ -55,7 +56,7 @@ This will print out the MAC address if found.
 00:00:00:00:00:00
 </pre>
 
-Edit the launch file and update with MAC address and name.
+### Edit the launch file and update with MAC address and name.
 <pre>
 catkin_ws$ rosedit miflora_server client.launch
 </pre>
@@ -66,6 +67,8 @@ catkin_ws$ rosedit miflora_server client.launch
     <!-- Sample Rate minimum is once per minute 0.01667 hz -->
     <arg name="sample_rate" default="0.01667"/>
 ```
+
+### Running the Node
 
 Start ROS Service
 <pre>
@@ -83,10 +86,10 @@ catkin_ws$ roslaunch miflora_server read_sensor.launch
 </pre>
 
 
-Troubleshooting:
+### Troubleshooting:
 ![Foto MiFlora Error](https://github.com/ros-agriculture/miflora_ros/blob/master/error.png?raw=true)
 
-If you raspberry pi stops being able to connect to the sensor run:
+If your raspberry pi stops being able to connect to the sensor run:
 <pre>
 $ sudo hciconfig hci0 down && sudo hciconfig hci0 up
 </pre>
